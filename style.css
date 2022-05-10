@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Square Peg', cursive;
+  font-weight: 1000;
+  font-size: 27px;
+}
+.loader_bg {
+  position: fixed;
+  z-index: 999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+.loader:before,
+.loader:after {
+  content: '';
+  border: 1em solid #ff5733;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+.loader:before {
+  animation-delay: 0.5s;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #a6cae5;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e08888;
+}
+#scrolltotop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: crimson;
+  cursor: pointer;
+}
+.toggle {
+  --width: 50px;
+  --height: calc(var(--width) / 2);
+  --border-radius: calc(var(--height) / 2);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+.sun_icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  color: white;
+}
+.toggle__input {
+  display: none;
+}
+
+.toggle__fill {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background: #dddddd;
+  transition: background 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__fill {
+  background: #009578;
+}
+
+.toggle__fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--height);
+  width: var(--height);
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s;
+}
+.toggle__input:checked ~ .toggle__fill::after {
+  transform: translateX(var(--height));
+}
+.dark_navbar {
+  background-color: black;
+}
+.beehive_logo img {
+  width: 60px;
+  height: 60px;
+  animation-name: beehive_logo_move;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+.logo_tag {
+  font-size: 34px;
+  margin-left: 7px;
+  /* animation: logo_tag_move 3s; */
+}
+.home_container img {
+  height: 700px;
+  width: 100%;
+}
+.home_container::before {
+  content: url(images/lang_icons.jpg);
+  position: absolute;
+  transform: scale(0.4);
+  top: 1%;
+  left: 60%;
+  animation: lang_icons_blink 2s infinite ease-in-out;
+}
+.home_container::after {
+  content: '"I am here to make your business shine on WEB..."';
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  top: 85%;
+  left: 26%;
+}
+.section_head {
+  font-size: 50px;
+  color: crimson;
+  padding-top: 20px;
+}
+.carousel-item img {
+  border-radius: 22px 12px;
+}
+.services_box {
+  display: flex;
+  flex-direction: row;
+}
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: #0e3959;
+  flex-direction: column;
+  color: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.box {
+  transition: transform 250ms, opacity 400ms;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.box_icon {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 10px;
+}
+.box_tag {
+  margin-top: 5px;
+  color: yellowgreen;
+  font-size: 40px;
+}
+.box_detail {
+  font-size: 25px;
+}
+.info {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.contact_info {
+  width: 40%;
+  background-color: #0e3959;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+.contact_info .info_box div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.contact_info .info_box div span {
+  min-width: 40px;
+  height: 40px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.contact_info .info_box div p {
+  color: white;
+  margin-left: 15px;
+}
+.contact_info .info_box div a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+.social_icon {
+  margin-top: 20px;
+  display: flex;
+}
+.social_icon li {
+  list-style: none;
+  margin-right: 15px;
+}
+.social_icon li a {
+  font-size: 1em;
+  color: black;
+}
+.social_icon li a:hover {
+  color: white;
+}
+.subscribe {
+  width: 60%;
+  background-color: #0e3959;
+  padding-top: 30px;
+}
+
+.mail label {
+  color: white;
+}
+.mail {
+  margin-left: 30px;
+}
+#Sender {
+  width: 80%;
+  background-color: aliceblue;
+  padding: 8px 10px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#Message {
+  width: 80%;
+  background-color: aliceblue;
+  padding: 8px 10px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type='submit'] {
+  width: 20%;
+  background-color: aliceblue;
+  color: black;
+  font-weight: 900;
+  padding: 4px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: slategrey;
+}
+.foot {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  background-color: #0e3959;
+  color: white;
+  font-weight: 900;
+  font-size: 0.9em;
+}
+.about_data,
+.about_images,
+.box,
+.detailed_info,
+.mail,
+.section_head {
+  opacity: 0;
+  position: relative;
+  bottom: -40px;
+  transition: all 0.8s ease-out;
+}
+.show {
+  opacity: 1;
+  bottom: 0;
+}
+.blinking {
+  animation: lang_icons_blink 2s infinite;
+}
+/* dark mode */
+.dark {
+  color: white;
+  background: black;
+}
+@keyframes beehive_logo_move {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(325%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes lang_icons_blink {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .home_container::before {
+    content: url(images/lang_icons.jpg);
+    position: absolute;
+    transform: scale(0.2);
+    top: 1%;
+    left: -20%;
+  }
+  .home_container::after {
+    content: '"We are here to make your business shine on WEB..."';
+    position: absolute;
+    color: white;
+    font-size: 35px;
+    top: 85%;
+    left: 15%;
+  }
+  .info {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_info {
+    width: 100%;
+  }
+  .subscribe {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1170px) {
+  .home_container::before {
+    content: url(images/lang_icons.jpg);
+    position: absolute;
+    transform: scale(0.3);
+    top: 1%;
+    left: 20%;
+  }
+  .home_container::after {
+    content: '"We are here to make your business shine on WEB..."';
+    position: absolute;
+    color: white;
+    font-size: 42px;
+    top: 85%;
+    left: 20%;
+  }
+  .info {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_info {
+    width: 100%;
+  }
+  .subscribe {
+    width: 100%;
+  }
+}

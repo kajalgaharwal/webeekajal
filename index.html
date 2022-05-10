@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>WebeeKajal | KAJAL GAHARWAL</title>
+  <link rel="icon" href="images/k.svg" />
+</head>
+
+<body>
+  <!-- <div class="loader_bg">
+    <div class="loader"></div>
+  </div> -->
+  <i id="scrolltotop" class="fa fa-arrow-up"></i>
+  <nav class="navbar navbar-expand-lg navbar-dark dark_navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><span class="beehive_logo"><img src="images/beehive.png" alt="" /></span><span
+          class="logo_tag">WebeeKajal</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-3">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li><label class="toggle" for="myToggle">
+              <input class="toggle__input" type="checkbox" id="myToggle">
+              <div class="toggle__fill"></div>
+              <span> <img src="images/sun.png" alt="" class="sun_icon"></span>
+            </label></li>
+        </ul>
+        <br />
+      </div>
+    </div>
+  </nav>
+
+  <header id="home">
+    <div class="home_container">
+      <img src="images/2.jpg" class="img-fluid" alt="Web Developer" />
+  </header>
+
+  <section id="about" class="container-fluid">
+    <div id="about_type" class="section_head d-flex justify-content-center"></div>
+    <div class="d-flex flex-column flex-sm-row bd-highlight justify-content-around">
+      <div class="d-flex align-items-center p-4 about_data">Hello Hola,नमस्ते👋 Vanakkam Satsriyakal!! I’m Kajal
+        Gaharwal -A
+        Web Developer,
+        Who is in love with &lt&#47&gt . I Like to Solve Problems with Tech🖥.<br>I am juvenile, dynamic, result
+        oriented
+        freelance web developer glabally. I create and build powerful, affordable and stunning
+        websites. After taking project in hand,I closely
+        work with customers, understaning their requirements and put my efforts to make that project successful as
+        Business is all about the customers. I focus on delivering
+        innovative, responsive websites and helping clients realize on their online potential.<br>I have done my
+        education in Masters
+        degree in computer application along with 3 years of
+        experience in this industry. As a designer, I am always willing to design fantastic
+        looking interfaces that will give a real experience to users and convert as much traffic as possible. This is
+        not just a design but a real experience.
+        I believe in writing success stories in digital world as WebeeKajal.<br>
+        I love experimenting with technology and designing a strong user experience. In Spite of the trend with the
+        industrialization of the Web, I wish to remain a craftsperson in the medium. I really like to work on creative
+        projects in order to obtain a real finished product.</div>
+      <div class="about_images">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active ">
+              <img src="images/6.jpg" class="d-block w-100" alt="...">
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="container-fluid">
+    <div id="services_type" class="section_head d-flex justify-content-center"></div>
+    <div class="services_box flex-column flex-sm-row align-items-center flex-wrap justify-content-around mb-1">
+      <div class="d-flex m-3 box"><img src="images/html.png" class="box_icon" alt="">
+        <div class="box_tag" data-animate="lang_icons_blink 2s">Web Development</div>
+        <div class="box_detail">I develop effective websites that adds value to customers business. My web
+          development services includes Personal/Professional Website development, Business/Company
+          Website development, E-commerce Website development, Web Application development, CMS implementation, Mobile
+          website development.</div>
+      </div>
+      <div class="d-flex m-3 box"><img src="images/css.png" class="box_icon" alt="">
+        <div class="box_tag" data-animate="lang_icons_blink 2s">Web Design</div>
+        <div class="box_detail">Are you looking to get a new website designed? I offer a full range of services for
+          your business from new start-ups to large multi-nationals, I serve for Website Designing, Mobile Application
+          Mocks, PSD to HTML, E-newsletter, Web Application, Renovation/revamp of Existing Website Design,
+          Modification/Addition in Existing Website Design etc.</div>
+      </div>
+      <div class="d-flex m-3 box"><img src="images/react.png" class="box_icon" alt="">
+        <div class="box_tag" data-animate="lang_icons_blink 2s">Graphic design</div>
+        <div class="box_detail">I am engaged in offering brochure,logo and catalogue design services.Are you looking to
+          get a
+          logo,brochure or catalogue?Then you are at the right place for your business.These will be professionally
+          developed with responsive design plus SEO friendly having
+          multiple framework expertise.</div>
+      </div>
+      <div class="d-flex m-3 box"><img src="images/javascript.png" class="box_icon" alt="">
+        <div class="box_tag" data-animate="lang_icons_blink 2s">Web promotion</div>
+        <div class="box_detail">Search Engine optimization is a great concept that helps the websites to achieve high
+          ranking on the search engines. I provide customized SEO solutions that are unique and specific to each client
+          and their business goals. I provides strategic SEO that ultimately boosts your bottom line.</div>
+      </div>
+
+      <div class="d-flex m-3 box"><img src="images/bootstrap.png" class="box_icon" alt="">
+        <div class="box_tag" data-animate="lang_icons_blink 2s">Domain and hosting </div>
+        <div class="box_detail"> Getting Domain and hosting serivice is the most essential step to display website on
+          web. Costing of domain is only depend of customer's need. I provide services like domain registration,
+          hosting, domain transfer, business email and SSL certificate.</div>
+      </div>
+      <div class="d-flex m-3 box"><img src="images/angular.png" class="box_icon" alt="">
+        <div class="box_tag" data-animate="lang_icons_blink 2s">Website Maintainence</div>
+        <div class="box_detail"> website Maintainence includes security update, graphic creation, blog post and
+          formatting, Search engine optimization, page updates, E-commerce products update etc.</div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="container-fluid px-0">
+    <div id="contact_type" class="section_head d-flex justify-content-center cons"></div>
+    <div class="info">
+      <div class="contact_info">
+        <div class="info_box">
+          <div class="detailed_info">
+            <span>
+              <ion-icon name="location-outline"></ion-icon>
+            </span>
+            <p>Subhash nagar, Ajmer, Rajasthan</p>
+          </div>
+          <div class="detailed_info">
+            <span>
+              <ion-icon name="mail-outline"></ion-icon>
+            </span>
+            <a href="mailto:webeekajal@gmail.com">webeekajal@gmail.com</a>
+          </div>
+          <div class="detailed_info">
+            <span>
+              <ion-icon name="call-outline"></ion-icon>
+            </span>
+            <a href=" tel:+919876543219">9876543219</a>
+          </div>
+          <ul class="social_icon">
+            <li><a href="">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a></li>
+            <li><a href="">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a></li>
+            <li><a href="">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a></li>
+            <li><a href="">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="subscribe">
+        <div class="mail">
+          <form class="contact_form" action="javascript:sendMsg()" method="post">
+            <label for="email">Email</label><br>
+            <input type="email" name="Sender" id="Sender" placeholder="Email" required=""><br>
+
+            <label for="query">Query</label><br>
+            <textarea name="Message" id="Message" placeholder="Message" required=""></textarea><br>
+            <input type="submit" value="Submit"></button>
+          </form>
+        </div>
+      </div>
+  </section>
+  <footer>
+    <div class="foot">Copyright ©
+      <script>document.write(new Date().getFullYear())</script>. All rights reserved. WebeeKajal | Kajal Gaharwal
+    </div>
+  </footer>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
